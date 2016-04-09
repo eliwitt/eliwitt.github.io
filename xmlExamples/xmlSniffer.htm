@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<TITLE>Listing One</TITLE>
+
+<SCRIPT>
+var BrowserWin;                  
+var Page;                        
+
+function Parse(xmlFilename)
+{
+    var xmlhttp;
+    var xmlDocument;
+
+    BrowserWin = window.open("", "XMLReport");
+    Page = BrowserWin.document;
+
+    Page.writeln("<HTML>");
+    Page.writeln("<TITLE>XML Output</TITLE>");
+    Page.writeln("<BODY>");
+    Page.writeln("<PRE>");
+
+//  Create a Document object and report the results.
+    if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+//  Create a new object instance
+    //xmlDocument = MSXML;                       
+    
+    xmlhttp.open("GET", xmlFilename, false);
+    ///xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            xmlDocument=xmlhttp.responseText; 
+    }
+    xmlhttp.send(null);
+                                            
+    Page.writeln(xmlDocument);
+
+    Page.writeln("<input type=button value=\"Close\" onClick=\"window.close()\">");
+    Page.writeln("</BODY>");
+    Page.writeln("</HTML>");
+
+// Reset xmlDocument for future use    
+    xmlDocument = null;                         
+}
+
+
+function createXHR() {
+   try { return new XMLHttpRequest(); } catch(e) {}
+   try { return new ActiveXObject("Msxml2.XMLHTTP.6.0"); } catch (e) {}
+   try { return new ActiveXObject("Msxml2.XMLHTTP.3.0"); } catch (e) {}
+   try { return new ActiveXObject("Msxml2.XMLHTTP"); } catch (e) {}
+   try { return new ActiveXObject("Microsoft.XMLHTTP"); } catch (e) {}
+   alert("XMLHttpRequest not supported");   
+   return null;
+}
+
+function sendRequest(xmlFilename) {
+    var xhr = createXHR();
+    alert('file ' + xmlFilename);
+    if (xhr) {
+      xhr.open("GET",xmlFilename,true);
+      xhr.onreadystatechange = function(){handleResponse(xhr);};
+      xhr.send(null);
+     }
+}
+
+function handleResponse(xhr) {
+
+  if (xhr.readyState == 4  && xhr.status == 200) {
+
+     var parsedResponse = xhr.responseXML;
+     var msg = parsedResponse.getElementsByTagName("Rag")[0].firstChild.nodeValue; 
+     var responseOutput = document.getElementById("responseOutput");    
+     responseOutput.innerHTML = msg;
+
+    }
+}
+</script>
+</HEAD>
+<body>
+    <P>Enter a filename<BR>
+<INPUT id="Filename" size=40 value="http://localhost/work/xmlExamples/north.xml"> Enter a file like http://localhost/work/north.xml
+<BR><BR>
+
+<INPUT TYPE = "BUTTON"
+    Name = "ParseButton"     
+    VALUE = "Parse XML File"
+    onClick = "Parse(Filename.value);">
+
+<input type=button value="Back" onClick="history.back()">
+
+<br><br>
+
+<div id="responseOutput">&nbsp;</div>
+
+</BODY>
+</HTML>
