@@ -1,0 +1,88 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "cfaa8fbbdcc7bb8d636cb974aad1f9b9",
+      "css": "cocktail",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "19c50c52858a81de58f9db488aba77bc",
+      "css": "open",
+      "code": 59399,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "297fe6c2ef08198b03d706ba52f51b7f",
+      "css": "plane",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7f3d8ff1d5f6ee019f0c00ed7a86caec",
+      "css": "truck",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7a9d73c640892d4b917c706ad95d6fec",
+      "css": "boat",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2bbde1076919db3d1dcc7f6b43d19bd4",
+      "css": "traffic",
+      "code": 59397,
+      "src": "entypo"
+    },
+    {
+      "uid": "52177c3387cdac48d6ed18bebe84c34a",
+      "css": "silent",
+      "code": 59398,
+      "src": "iconic"
+    },
+    {
+      "uid": "e6t4yvmv401e9gpo2anslq4uqy2iz692",
+      "css": "fest",
+      "code": 59408,
+      "src": "modernpics"
+    },
+    {
+      "uid": "10fdd98fb50c590b805a3ad6ff9c55f5",
+      "css": "throw",
+      "code": 59407,
+      "src": "elusive"
+    },
+    {
+      "uid": "c99e966e3d22ec0b9d8678fd524e5512",
+      "css": "facebook",
+      "code": 59404,
+      "src": "elusive"
+    },
+    {
+      "uid": "09cad6e46ec29b279626434802012bba",
+      "css": "linkedin",
+      "code": 59401,
+      "src": "elusive"
+    },
+    {
+      "uid": "c37b15dbb7b146c359d45b577fba6c0e",
+      "css": "pinterest",
+      "code": 59402,
+      "src": "elusive"
+    },
+    {
+      "uid": "26969cfbd811730075e4c657cc9fda2a",
+      "css": "twitter",
+      "code": 59403,
+      "src": "elusive"
+    }
+  ]
+}

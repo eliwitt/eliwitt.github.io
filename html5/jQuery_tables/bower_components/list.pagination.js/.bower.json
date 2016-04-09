@@ -1,0 +1,35 @@
+{
+  "name": "list.pagination.js",
+  "main": "dist/list.pagination.js",
+  "version": "0.1.0",
+  "authors": [
+    "Jonny Strömberg <jonny.stromberg@gmail.com>"
+  ],
+  "description": "A pagination plugin for List.js",
+  "keywords": [
+    "pagination",
+    "list.js",
+    "list",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "homepage": "http://listjs.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.0",
+    "commit": "efa2365b5c32f5f55832e246300b531b4e31124c"
+  },
+  "_source": "git://github.com/javve/list.pagination.js.git",
+  "_target": "~0.1.0",
+  "_originalSource": "list.pagination.js",
+  "_direct": true
+}

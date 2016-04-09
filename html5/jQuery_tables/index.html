@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>List of Endangered Species in UK</title>
+	<link rel="stylesheet" href="styles/aestheti.css">
+	<link rel="stylesheet" href="js/libs/chosen/chosen.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>List of Endangered Species in UK</h1>
+		<table class="table table-striped dynatable-endangered">
+			<thead>
+				<tr>
+					<th class="common_name">Common Name</th>
+					<th class="latin_name">Latin Name</th>
+					<th class="description">Description</th>
+				</tr>
+			
+			</thead><tbody>
+		</table>
+
+		<select id="chosen" name="chosen" class="form-group" multiple data-placeholder="Refine by kingdom">
+			<option value="mammal">Mammals</option>
+			<option value="bird">Birds</option>
+			<option value="reptile">Reptiles</option>
+			<option value="bird">Birds</option>
+			<option value="amphibian">Amphibians</option>
+			<option value="fish">Fish</option>
+			<optgroup label="Insects">
+				<option value="ant">Ants</option>
+				<option value="bee">Bees</option>
+				<option value="beetle">Beetles</option>
+				<option value="butterfly-moth">Butterflies and moths</option>
+				<option value="cricket">Crickets</option>
+				<option value="damselfly">Damselflies</option>
+				<option value="fly">Flies</option>
+				<option value="grasshopper">Grasshoppers</option>
+			</optgroup>
+			<option value="crustacean">Crustaceans</option>
+			<option value="mollusc">Molluscs</option>
+			<option value="other-invertebrate">Other invertebrates</option>
+			<optgroup label="Plants">
+				<option value="flowering-plant">Flowering plants</option>
+				<option value="fern">Ferns</option>
+			</optgroup>
+			<option value="fungi">Fungi</option>
+			<option value="lichen">Lichens</option>
+			<option value="moss">Mosses</option>
+			<option value="liverwort">Liverworts</option>
+			<option value="stonewort">Stoneworts</option>
+		</select>
+		
+		<br><br>
+
+		<div id="species-list">
+			<!-- <input type="search" class="search form-control" placeholder="Search" /> -->
+			<form class="form-inline">
+				<div class="form-group">
+					<input type="search" class="fuzzy-search form-control" placeholder="Fuzzy Search">
+				</div>
+				<div class="form-group">
+					<button class="sort btn btn-default" data-sort="common_name">Sort by name</button>
+				</div>
+			</form>
+			<ul class="list list-group"></ul>
+			<ul class="pagination"></ul> 
+		</div>
+
+		<div style="display:none;">
+			<li id="species-item" class="list-group-item">
+				<h3 class="common_name"></h3>
+				<p class="latin_name"></p>
+			</li>
+		</div>
+
+		<!-- <h2>Chosen</h2>
+		<label for="chosen">Select&hellip;</label>
+		<br> 
+		<select id="chosen" name="chosen" style="width: 10em;" multiple data-placeholder="Choose a greeting...">
+			<optgroup label="Greeting">
+				<option value="pirate">Ahoy</option>
+				<option value="english">Hello</option>
+			</optgroup>
+			<optgroup label="Farewell">
+				<option value="italian">Ciao</option>
+				<option value="english">Bye</option>
+			</optgroup>
+		</select> -->
+		
+	</div>
+
+	<script src="js/libs/jquery.js"></script>
+	<script src="js/libs/dynatable.js"></script>
+
+	<script src="bower_components/list.js/dist/list.js"></script>
+	<script src="bower_components/list.fuzzysearch.js/dist/list.fuzzysearch.min.js"></script>
+	<script src="bower_components/list.pagination.js/dist/list.pagination.min.js"></script>
+	
+	<script src="js/libs/chosen/chosen.jquery.min.js"></script>
+
+	<script src="js/app.js"></script>
+</body>
+</html>

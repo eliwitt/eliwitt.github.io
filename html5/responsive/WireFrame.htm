@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Basic Page Needs
+  ================================================== -->
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+	<title>Your Page Title Here :)</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'/>
+<meta name="viewport"  content="initial-scale=1, width=device-width"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="shortcut icon" href="../images/vwlogo.ico"/>
+<link rel="icon" type="image/x-ico" href="../images/vwlogo.ico"/>
+</head>
+<body>
+		<div id="header">
+ 			<h1>Skeleton</h1>
+            <span class="textArea">423-774-8811</span>
+		</div>
+       	<div id="menu">
+            <div class="textArea">
+			<ul>
+                <li><a href="#sectHome">Home</a></li>
+                <li><a href="#sectAbout">About</a></li>
+                <li><a href="#">Stuff</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">More Stuff</a></li>
+            </ul>
+            </div>
+		</div>
+		<div id="content">
+            <div id="main">
+                <div class="textArea">
+			<h3>About Skeleton?</h3>
+            <img src="../../images/linked.png" width="540" height="435" alt="responsive design image" class="img">
+			<p id="sectHome">Skeleton is a small collection of well-organized CSS files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. It's based on a responsive grid, but also provides very basic CSS for typography, buttons, forms and media queries. Go ahead, resize this super basic page to see the grid in action.</p>
+<p>
+ If TypeOf valueOfX Is Double Then
+     Dim myDbl As Double
+     Double.TryParse(ValueToFind.ToString, myDbl)
+     Dim comp As IComparable = CType(valueOfX, IComparable)
+     valCompare = comp.CompareTo(myDbl)
+</P>
+So “valCompare” holds 0=Equal, 1=Greater, or -1=Less which you can then decide with the additional help of a constraint variable to determine if you have a match. Note, you could use this same check in validation.
+<p>
+Hook up an event.
+
+AddHandler Me._operation.ProgressChanged, AddressOf _oper_ProgressChanged
+
+A subreport event handler for an RDLC report.
+
+        </p>
+        <p id="sectAbout">
+        You can use LINQ with tableadapters.  There are two ways you can do this the first is to use the Field collection that the fill method populates as follows:
+                this.sAP2ChampsRunTableAdapter.Fill(this.sparePartsDS.SAP2ChampsRun);
+var partDt = (from partsrc in this.sparePartsDS.SAP2ChampsRun.AsEnumerable()
+              select partsrc.Field<DateTime>("PartsUpDt")).FirstOrDefault();
+this.tslPartDate.Text = "Parts as of " + partDt.Date.ToShortDateString();
+</p><p>
+Then the other way is to use the datatable and datarow collection that the GetData(type safe) method populates.
+</p><p>
+DataSets.SparePartsDS.SAP2ChampsRunDataTable myParts = this.SAP2ChampsRunTableAdapter.GetData();
+var partII = (from partSrc in myParts.AsEnumerable<DataSets.SparePartsDS.SAP2ChampsRunRow>()
+             select partSrc.PartsUpDt).FirstOrDefault();
+this.lblPartsUpDt.Text = "Parts as of " + partII.Date.ToShortDateString();
+
+
+        </p>
+                </div>
+            </div>
+		</div>
+		<div class="sidebar">
+            <div class="textArea">
+			<h3>Three Core Principles</h3>
+			<p>Skeleton is built on three core principles:</p>
+			<ul class="square">
+				<li><strong>A Responsive Grid Down To Mobile</strong>: Elegant scaling from a browser to tablets to mobile.</li>
+				<li><strong>Fast to Start</strong>: It's a tool for rapid development with best practices</li>
+				<li><strong>Style Agnostic</strong>: It provides the most basic, beautiful styles, but is meant to be overwritten.</li>
+			</ul>
+            </div>
+		</div>
+		<div id="footer">
+			<h3>Docs &amp; Support</h3>
+			<p>The easiest way to really get started with Skeleton is to check out the full docs and info at <a href="http://www.getskeleton.com">www.getskeleton.com.</a>. Skeleton is also open-source and has a <a href="https://github.com/dhgamache/skeleton">project on git</a>, so check that out if you want to report bugs or create a pull request. If you have any questions, thoughts, concerns or feedback, please don't hesitate to email me at <a href="mailto:hi@getskeleton.com">hi@getskeleton.com</a>.</p>
+		</div>
+</body>
+</html>
